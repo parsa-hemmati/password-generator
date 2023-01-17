@@ -1,51 +1,49 @@
 <!DOCTYPE html>
 <html lang="en-gb">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
-          <form>
-            <label for="uppercase">Include uppercase letters</label>
-            <input type="checkbox" id="uppercase" name="uppercase">
-            <br>
-            <label for="lowercase">Include lowercase letters</label>
-            <input type="checkbox" id="lowercase" name="lowercase">
-            <br>
-            <label for="numbers">Include numbers</label>
-            <input type="checkbox" id="numbers" name="numbers">
-            <br>
-            <label for="specialCharacters">Include special characters</label>
-            <input type="checkbox" id="specialCharacters" name="specialCharacters">
-            <br>
-            <button type="button" onclick="generate()">Generate password</button>
-          </form>
-          <div id="password"></div>
-          
-        </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+    <div class="card">
+      <div class="card-header">
+        <h2>Generate a Password</h2>
+      </div>
+      <div class="card-body">
+        <form>
+          <label for="length">Password length:</label>
+          <input type="number" id="length" name="quantity" min="1" max="100" value="1">
+          <br>
+          <label for="uppercase">Password should include uppercase letters</label>
+          <input type="checkbox" id="uppercase" name="uppercase">
+          <br>
+          <label for="lowercase">Password should include lowercase letters</label>
+          <input type="checkbox" id="lowercase" name="lowercase">
+          <br>
+          <label for="numbers">Password should include numbers</label>
+          <input type="checkbox" id="numbers" name="numbers">
+          <br>
+          <label for="specialCharacters">Password should include special characters</label>
+          <input type="checkbox" id="specialCharacters" name="specialCharacters">
+          <br>
+        </form>
+        <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+      </div>
+      <div class="card-footer">
+        <button id="generate" class="btn">Generate Password</button>
       </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>
